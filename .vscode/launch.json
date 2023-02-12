@@ -6,19 +6,26 @@
   "configurations": [
     // {
     //   "type": "java",
-    //   "name": "Debug (Launch)",
-    //   "request": "launch",
-    //   "cwd": "${workspaceFolder}/java-api",
-    //   "console": "internalConsole",
-    //   "stopOnEntry": false,
-    //   "mainClass": "com.hippotech.api.ApiApplication",
-    // },
+    //   "request": "attach",
+    //   "name": "Java",
+    //   "port": 5005,
+    //   "sourceRoots": []
+    // }
     {
       "type": "java",
-      "name": "Debug (Attach)",
-      "request": "attach",
-      "hostName": "localhost",
-      "port": 8000
-    }
+      "name": "Debug (Launch)",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/java-api",
+      "console": "internalConsole",
+      "stopOnEntry": false,
+      "mainClass": "com.hippotech.api.ApiApplication",
+    },
+    // {
+    //   "type": "java",
+    //   "name": "Debug (Attach)",
+    //   "request": "attach",
+    //   "hostName": "localhost",
+    //   "port": 8000
+    // }
   ]
 }
