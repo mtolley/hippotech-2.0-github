@@ -1,0 +1,5 @@
+version: "3"
+
+services:
+    hippotech:
+        command: bash -c "./start.sh && cd /hippotech-react && . /usr/local/nvm/nvm.sh && npx cypress run"

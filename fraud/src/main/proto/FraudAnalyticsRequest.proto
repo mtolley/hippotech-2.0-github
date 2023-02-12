@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.hippotech.fraud;
+
+message FraudAnalyticsRequest {
+    string familyName = 1;
+    string cardNumber = 2;
+}
+
+message FraudAnalyticsResponse {
+    bool suspicious = 1;
+    string message = 2;
+}
+
+service FraudAnalyticsService {
+    rpc fraudAnalysis(FraudAnalyticsRequest) returns (FraudAnalyticsResponse);
+}
