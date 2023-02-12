@@ -1,7 +1,7 @@
 {
     "image":"mcr.microsoft.com/devcontainers/universal:2",
 
-    "postStartCommand": "cd java-api && mvn package -DskipTests && java -jar java-api/target/api.jar",
+    "postStartCommand": "cd java-api && mvn package -DskipTests && java -jar target/api.jar",
     "forwardPorts": [ 3001 ],
 	// Configure tool-specific properties.
 	"customizations": {
