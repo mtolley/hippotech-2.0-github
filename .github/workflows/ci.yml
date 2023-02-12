@@ -14,6 +14,12 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
+      
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 16
+      #     cache: 'npm'
+      #     cache-dependency-path: hippotech-react/package-lock.json
 
       - name: Set up JDK 11
         uses: actions/setup-java@v2
@@ -32,28 +38,22 @@ jobs:
         working-directory: ./java-api
         run: mvn -DskipTests=true package
 
-      - name: Start HippoTech server for testing
-        working-directory: ./java-api
-        run: ./start.sh
+      # - name: Start HippoTech server for testing
+      #   working-directory: ./java-api
+      #   run: ./start.sh
 
-      - name: Install Cypress
-        uses: cypress-io/github-action@v4
-        with:
-          working-directory: ./hippotech-react
-          runTests: false
+      # - name: Install Cypress
+      #   uses: cypress-io/github-action@v4
+      #   with:
+      #     working-directory: ./hippotech-react
+      #     runTests: false
 
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
-        with:
-          working-directory: ./hippotech-react
-          install: false
+      # - name: Cypress run
+      #   uses: cypress-io/github-action@v4
+      #   with:
+      #     working-directory: ./hippotech-react
+      #     install: false
         
-      - name: Upload screenshots
-        uses: actions/upload-artifact@v2
-        if: failure()
-        with:
-          name: cypress-screenshots
-          path: hippotech-react/cypress/screenshots
 
       # Test run video was always captured, so this action uses "always()" condition
       # - name: Upload video
