@@ -1,0 +1,23 @@
+{
+    "image":"mcr.microsoft.com/devcontainers/universal:2",
+
+    "postCreateCommand": "cd java-api && mvn package -DskipTests",
+    "forwardPorts": [ 3001 ],
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": { 
+				"files.watcherExclude": {
+					"**/target/**": true
+				}
+			},
+			
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"vscjava.vscode-java-pack"
+			]
+		}
+	}
+}
