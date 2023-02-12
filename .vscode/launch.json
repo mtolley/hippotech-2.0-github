@@ -14,17 +14,11 @@
     //   "mainClass": "com.hippotech.api.ApiApplication",
     // },
     {
-      "type": "chrome",
-      "request": "launch",
-      "name": "xxx",
-      "url": "http://localhost:3001",
-      "webRoot": "${workspaceFolder}",
-      "runtimeExecutable": "stable"
-      // "runtimeArgs": ["--headless"],
-      // "preLaunchTask": "start server",
-      // "postDebugTask": "stop server" 
-  }
-
-
+      "type": "java",
+      "name": "Debug (Attach)",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 8000
+    }
   ]
 }
