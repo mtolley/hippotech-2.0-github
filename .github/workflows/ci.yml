@@ -38,6 +38,16 @@ jobs:
         working-directory: ./java-api
         run: mvn -DskipTests=true package
 
+      - name: Release
+        uses: djnicholson/release-action@v2.11
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-name: 'v2.0'
+          tag-name: 'v2.0'
+          asset-name: 'api.jar'
+          file: 'java-api/target/api.jar'
+  
+
       # - name: Start HippoTech server for testing
       #   working-directory: ./java-api
       #   run: ./start.sh
@@ -63,11 +73,12 @@ jobs:
       #     name: cypress-videos
       #     path: hippotech-react/cypress/videos
 
-      # - name: Upload application logs
+
+      # - name: Upload jar
       #   uses: actions/upload-artifact@v2
       #   if: always()
       #   with:
-      #     name: HippoTech Application Logs
+      #     name: L
       #     path: java-api/logs/hippotech.log
 
                   

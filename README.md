@@ -1,8 +1,37 @@
-# HippoTech 2.0 - An Intentionally Vulnerable SPA
+# HippoTech 2.0 - GitHub Demo
 
-HippoTech is a fake, online mortgage service full of the worst kinds of security vulnerabilities you can imagine...and then some! It is designed for application security training and you should run it carefully, in private, and **never expose it on the network or internet** because it is dangerously vulnerable.
+Take Seeker for a spin in GitHub in a matter of seconds with the hottest new startup in tech: HippoTech 2.0. There's nothing to install: it all runs in the cloud in GitHub Codespaces.
 
-Questions? Comments? Hit the author up at <mtolley@synopsys.com>. 
+Questions and feedback are welcome! Send it to <mtolley@synopsys.com>. 
+
+## Getting Set Up
+
+### Create your personal repository from the template
+
+Click **Use this template**, then click **Create a new repository**
+
+![Use this template screenshot](use-this-template-button.png)
+
+Name it anything you like. It can be a public or a private repository. Click **Create repository from template**. Now you have your own HippoTech repository to work with.
+
+### Configure Seeker
+
+You'll need to provide two pieces of information to configure Seeker:
+
+1. The URL of your Seeker server.
+1. The Project Key for the Project you wish to use.
+
+If you don't have a Seeker Project set up and ready to use, go ahead and create one now.
+
+Once you have these details you can set them as secrets for your GitHub Codespace. Navigate to Settings -> Secrets and variables -> Codespaces and click on **New repository secret**. 
+
+1. Create a repository secret named SEEKER_SERVER_URL.
+1. Create another repository secret named SEEKER_PROJECT_KEY.
+
+If your setup looks like this:
+
+![The Completed Repository Secrets](repository-secrets-completed.png)
+you're all set!
 
 ## The Tech Stack
 
