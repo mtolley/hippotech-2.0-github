@@ -1,6 +1,6 @@
 {
     "image":"mcr.microsoft.com/devcontainers/universal:2",
-    "postStartCommand": "curl 'https://github.com/mtolley/hippotech-2.0-github/releases/latest/download/api.jar' --output api.jar && nohup bash -c 'java -jar api.jar &'",
+    "postStartCommand": "bash ./download-latest-release.sh && nohup bash -c 'java -jar api.jar &'",
     "forwardPorts": [ 3001 ],
 	// Configure tool-specific properties.
 	"customizations": {

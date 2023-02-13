@@ -67,21 +67,3 @@ jobs:
       #     working-directory: ./hippotech-react
       #     install: false
         
-
-      # Test run video was always captured, so this action uses "always()" condition
-      # - name: Upload video
-      #   uses: actions/upload-artifact@v2
-      #   if: always()
-      #   with:
-      #     name: cypress-videos
-      #     path: hippotech-react/cypress/videos
-
-
-      # - name: Upload jar
-      #   uses: actions/upload-artifact@v2
-      #   if: always()
-      #   with:
-      #     name: L
-      #     path: java-api/logs/hippotech.log
-
-                  
