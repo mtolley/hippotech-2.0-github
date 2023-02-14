@@ -1,8 +1,10 @@
-FROM mcr.microsoft.com/devcontainers/universal:2
+# FROM mcr.microsoft.com/devcontainers/universal:2
 
-RUN apt update && apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
+# RUN apt update && apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 
-
+FROM mcr.microsoft.com/devcontainers/base:ubuntu
+# Install the xz-utils package
+RUN apt-get update && apt-get install -y xz-utils
 
 # FROM maven:3.8.6-jdk-11
 
