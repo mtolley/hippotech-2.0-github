@@ -1,5 +1,9 @@
 {
-    "image":"mcr.microsoft.com/devcontainers/universal:2",
+    //"image":"mcr.microsoft.com/devcontainers/universal:2",
+    "build": {
+      // Path is relataive to the devcontainer.json file.
+      "dockerfile": "Dockerfile"
+    },
     "postStartCommand": "bash init.sh && bash ./download-latest-release.sh && nohup bash -c 'java -jar api.jar &'",
     "postCreateCommand": "echo 'Your custom message'",
     "forwardPorts": [ 3001 ],
