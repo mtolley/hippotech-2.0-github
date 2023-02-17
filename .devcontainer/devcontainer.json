@@ -1,9 +1,9 @@
 {
     "image":"mcr.microsoft.com/devcontainers/universal:2",
-    // "features": {
-    //   "ghcr.io/devcontainers-contrib/features/jest:2": {},
-    // },  
-    "postStartCommand": "bash init.sh && bash ./download-latest-release.sh && nohup bash -c 'java -jar api.jar &'",
+    "features": {
+      "ghcr.io/devcontainers-contrib/features/jest:2": {},
+    },  
+    "postStartCommand": "cd jest && bash ./download-latest-release.sh && nohup bash -c 'java -jar api.jar &'",
     "forwardPorts": [ 3001 ],
 	// Configure tool-specific properties.
 	"customizations": {
