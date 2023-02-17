@@ -17,7 +17,6 @@ describe('Blog', () => {
     };
     try {
       const response = await axios.post(url, data);   
-      console.log(response.data)
     } catch (e) {
       console.error('suscribeToBlog() POST failed');
       console.error(e);
