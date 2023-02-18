@@ -3,7 +3,7 @@
     // "features": {
     //   "ghcr.io/devcontainers-contrib/features/jest:2": {},
     // },  
-    "postStartCommand": "nohup bash -c 'echo abc > abc && ./init.sh && echo aaa > aaa &'",
+    "postStartCommand": "nohup bash -c 'echo 'Starting HippoTech' && ./init.sh &'",
     "forwardPorts": [ 3001 ],
 	// Configure tool-specific properties.
 	"customizations": {
