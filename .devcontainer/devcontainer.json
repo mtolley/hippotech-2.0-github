@@ -3,7 +3,7 @@
     // "features": {
     //   "ghcr.io/devcontainers-contrib/features/jest:2": {},
     // },  
-    "postStartCommand": "cd jest && npm install & bash ./download-latest-release.sh && nohup bash ./init.sh &",
+    "postStartCommand": "bash ./init.sh &",
     "forwardPorts": [ 3001 ],
 	// Configure tool-specific properties.
 	"customizations": {

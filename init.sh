@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cd jest && npm install & 
+bash ./download-latest-release.sh 
+
 JAVA_OPTS="-Xmx512m"
  
 # Deploy the Seeker Java Agent
@@ -14,4 +17,4 @@ then
 fi
  
 # Run the application
-java ${JAVA_OPTS} -jar api.jar
+java ${JAVA_OPTS} -jar api.jar 2>&1 | tee hippotech.log
