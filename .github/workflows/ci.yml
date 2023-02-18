@@ -61,7 +61,7 @@ jobs:
           fi
     
       - name: Add Seeker agent
-        if: ${{ steps.seeker-check.outputs.enabled === 'true' }}
+        if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
         uses: mtolley/seeker-github-actions/download-seeker-agent@v1.1
         with:
           seekerServerUrl: ${{ secrets.SEEKER_SERVER_URL }}
