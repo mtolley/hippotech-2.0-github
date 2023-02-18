@@ -49,7 +49,25 @@ jobs:
           tag-name: 'v2.0'
           asset-name: 'api.jar'
           file: 'java-api/target/api.jar'
-  
+
+      - name: Check whether Seeker is enabled
+        id: seeker-check
+        shell: bash
+        run: |
+          if [ "${{ secrets.SEEKER_SERVER_URL }}" != '' ]; then
+            echo "enabled=true" >> $GITHUB_OUTPUT;
+          else
+            echo "enabled=false" >> $GITHUB_OUTPUT;
+          fi
+    
+      - name: Add Seeker agent
+        if: ${{ steps.seeker-check.outputs.enabled != 'true' }}
+        uses: mtolley/seeker-github-actions/download-seeker-agent@v1.1
+        with:
+          seekerServerUrl: ${{ secrets.SEEKER_SERVER_URL }}
+          seekerProjectKey: ${{ secrets.SEEKER_PROJECT_KEY }}
+          technology: JAVA
+          osFamily: LINUX
 
       # - name: Start HippoTech server for testing
       #   working-directory: ./java-api
