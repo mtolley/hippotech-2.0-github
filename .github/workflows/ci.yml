@@ -92,6 +92,7 @@ jobs:
           install: false
         
       - name: List Seeker Vulnerabilities
+        if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
         uses: mtolley/seeker-github-actions/list-seeker-vulnerabilities@v1.1
         with:
           seekerServerUrl: ${{ secrets.SEEKER_SERVER_URL }}
