@@ -75,6 +75,7 @@ jobs:
         shell: bash
         run: |
           echo "JAVA_TOOL_OPTIONS=-javaagent:`pwd`/seeker/seeker-agent.jar" >> $GITHUB_ENV
+          echo "https://www.google.com" >> $GITHUB_STEP_SUMMARY
 
       - name: Start HippoTech server for testing
         working-directory: ./java-api
