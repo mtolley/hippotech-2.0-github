@@ -15,8 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SEEKER_SERVER_URL: ${{ secrets.SEEKER_SERVER_URL }}
-      SEEKER_PROJECT_KEY: ${{ secrets.SEEKER_PROJECT_KEY }}
+      SEEKER_SERVER_URL: ${{ vars.SEEKER_SERVER_URL }}
+      SEEKER_PROJECT_KEY: ${{ vars.SEEKER_PROJECT_KEY }}
     
     steps:
       - uses: actions/checkout@v3
@@ -57,7 +57,7 @@ jobs:
         id: seeker-check
         shell: bash
         run: |
-          if [ "${{ secrets.SEEKER_SERVER_URL }}" != '' ]; then
+          if [ "${{ secrets.SEEKER_ACCESS_TOKEN }}" != '' ]; then
             echo "enabled=true" >> $GITHUB_OUTPUT;
           else
             echo "enabled=false" >> $GITHUB_OUTPUT;
