@@ -3,7 +3,7 @@
     // "features": {
     //   "ghcr.io/devcontainers-contrib/features/jest:2": {},
     // },  
-    "postStartCommand": "nohup bash ./init.sh &",
+    "postStartCommand": "echo ttt > ttt && nohup bash ./init.sh",
     "forwardPorts": [ 3001 ],
 	// Configure tool-specific properties.
 	"customizations": {
