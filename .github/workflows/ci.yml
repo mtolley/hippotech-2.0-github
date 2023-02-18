@@ -91,3 +91,11 @@ jobs:
           working-directory: ./hippotech-react
           install: false
         
+      - name: List Seeker Vulnerabilities
+        uses: mtolley/seeker-github-actions/list-seeker-vulnerabilities@v1.1
+        with:
+          seekerServerUrl: ${{ secrets.SEEKER_SERVER_URL }}
+          seekerProjectKey: ${{ secrets.SEEKER_PROJECT_KEY }}
+          seekerAPIToken: ${{ secrets.SEEKER_ACCESS_TOKEN }}
+          minSeverity: HIGH
+          onlySeekerVerified: true
