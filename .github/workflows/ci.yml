@@ -12,18 +12,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      actions: read|write
-      checks: read|write
-      contents: read|write
-      deployments: read|write
-      id-token: read|write
-      issues: read|write
-      discussions: read|write
-      packages: read|write
-      repository-projects: read|write
-      security-events: read|write
-      statuses: read|write
-      
+      actions: write
+      checks: write
+      contents: write
+      deployments: write
+      id-token: write
+      issues: write
+      discussions: write
+      packages: write
+      repository-projects: write
+      security-events: write
+      statuses: write
+
     env:
       SEEKER_SERVER_URL: ${{ vars.SEEKER_SERVER_URL }}
       SEEKER_PROJECT_KEY: ${{ vars.SEEKER_PROJECT_KEY }}
