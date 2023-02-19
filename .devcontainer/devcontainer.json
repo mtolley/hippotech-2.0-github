@@ -4,7 +4,7 @@
     //   "ghcr.io/devcontainers-contrib/features/jest:2": {},
     // },  
     // "postStartCommand": "nohup bash -c 'echo starting > log.txt && ./init.sh &'",
-    "postStartCommand": [ "bash", "init2.sh" ],
+    "postStartCommand": [ "bash", "wait-for-app-startup.sh" ],
     "forwardPorts": [ 3001 ],
 	// Configure tool-specific properties.
 	"customizations": {
