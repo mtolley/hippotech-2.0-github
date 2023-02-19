@@ -33,7 +33,18 @@ Open your new repository in GitHub CodeSpaces by clicking on the **Code** button
 
 ![Create a codespace on main](screenshots/create-a-codespace-on-main.png)
 
-You'll need to wait a minute or two for the environment to be fully created and for the HippoTech application to start. Port forwarding is set up to port 3001 and once the application is available you'll be able to access it by clicking on the ports tab and then the internet/globe icon which will open a new browser window. It does take a minute to start, so if you get an error page to start with just give it a moment, or check out the application logs in `hippotech.log`.
+You'll need to wait a minute or two for the environment to be fully created and for the HippoTech application to start. Once you see this message in the terminal:
+
+```
+✔ Finishing up...
+✔ Running postCreateCommand...
+⠋ Running postStartCommand...
+  › bash wait-for-app-startup.sh
+```
+
+you're on the last step. Just wait for this output to disappear and the application will be ready for testing.
+
+Port forwarding is set up to port 3001 and once the application is available you'll be able to access it by clicking on the ports tab and then the internet/globe icon which will open a new browser window. It does take a minute to start, so if you get an error page to start with just give it a moment, or check out the application logs in `hippotech.log`.
 
 ## The HippoTech 2.0 Application
 
