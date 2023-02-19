@@ -24,4 +24,4 @@ do
   sleep 1
 done
 echo
-echo "HippoTech is running." > logx.txt
+echo "HippoTech is running." >> logx.txt
