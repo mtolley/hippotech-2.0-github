@@ -16,7 +16,7 @@ then
 fi
  
 # Run the application
-java ${JAVA_OPTS} -jar api.jar 2>&1 | tee hippotech.log 
+java ${JAVA_OPTS} -jar api.jar 2>&1 | tee hippotech.log &
 server_pid=$!
 
 until grep -q -i 'Started ApiApplication' hippotech.log
