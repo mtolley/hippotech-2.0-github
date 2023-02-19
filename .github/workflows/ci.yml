@@ -119,7 +119,7 @@ jobs:
         if: success() || failure()
         with:
           name: JEST Tests            
-          path: jest/jest-*.xml    
+          path: jest/junit.xml    
           reporter: jest-junit        
 
       # - name: Get results from Seeker
