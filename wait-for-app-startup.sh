@@ -16,9 +16,9 @@ then
 fi
  
 # Run the application
-nohup bash -c "java ${JAVA_OPTS} -jar api.jar &"
+nohup bash -c "java ${JAVA_OPTS} -jar api.jar &" &> startup.log
 
-until grep -q -i 'Started ApiApplication' nohup.out
+until grep -q -i 'Started ApiApplication' startup.log
 do
   echo -n "." >> logx.txt
   sleep 1
