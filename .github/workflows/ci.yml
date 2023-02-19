@@ -80,21 +80,24 @@ jobs:
         working-directory: ./java-api
         run: ./start.sh
 
-      - name: Install Cypress
-        uses: cypress-io/github-action@v4
-        with:
-          working-directory: ./hippotech-react
-          runTests: false
+      # Cypress tests are very nice, love this framework! However, for sheer speed
+      # we'll use the Jest equivalent, so these steps are now commented out.
+
+      # - name: Install Cypress
+      #   uses: cypress-io/github-action@v4
+      #   with:
+      #     working-directory: ./hippotech-react
+      #     runTests: false
+
+      # - name: Cypress run
+      #   uses: cypress-io/github-action@v4
+      #   with:
+      #     working-directory: ./hippotech-react
+      #     install: false
 
       - name: Run Automated Acceptance Tests
         working-directory: ./jest
         run: npm install && npm test
-
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
-        with:
-          working-directory: ./hippotech-react
-          install: false
         
       - name: List Seeker Vulnerabilities
         if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
@@ -110,6 +113,14 @@ jobs:
           seekerAPIToken: ${{ secrets.SEEKER_ACCESS_TOKEN }}
           generateComplianceReportPDF: true
           failBuildIfNotInCompliance: true
+
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: JEST Tests            
+          path: jest/jest-*.xml    
+          reporter: jest-junit        
 
       # - name: Get results from Seeker
       #   if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
