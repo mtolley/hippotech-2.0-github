@@ -1,6 +1,6 @@
 # HippoTech 2.0 - GitHub Demo
 
-Take Seeker for a spin in GitHub in a matter of seconds with the hottest new startup in tech: HippoTech 2.0. There's nothing to install: it all runs in the cloud in GitHub Codespaces. You can also experiment with continuous integration via GitHub Actions: [GitHub Actions setup](ci-cd-github-actions.md)
+Take Seeker for a spin in GitHub in just a few minutes with the hottest new startup in tech: HippoTech 2.0. There's nothing to install: it all runs in the cloud in GitHub Codespaces. You can also experiment with continuous integration via GitHub Actions: [instructions](ci-cd-github-actions.md)
 
 Questions and feedback are welcome! Send it to <mtolley@synopsys.com>. 
 

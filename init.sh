@@ -1,10 +1,7 @@
 #!/bin/bash
 
-echo "one" >> ttt
 cd jest && npm install & 
-echo "two" >> ttt
 bash ./download-latest-release.sh 
-echo "three" >> ttt
 JAVA_OPTS="-Xmx512m"
  
 # Deploy the Seeker Java Agent
