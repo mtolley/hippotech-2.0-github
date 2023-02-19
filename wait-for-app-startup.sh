@@ -20,8 +20,8 @@ nohup bash -c "java ${JAVA_OPTS} -jar api.jar &" &> startup.log
 
 until grep -q -i 'Started ApiApplication' startup.log
 do
-  echo -n "." >> logx.txt
+  echo -n "."
   sleep 1
 done
 echo
-echo "HippoTech is running." >> logx.txt
+echo "HippoTech is running."

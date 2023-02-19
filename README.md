@@ -42,7 +42,7 @@ You'll need to wait a minute or two for the environment to be fully created and 
   › bash wait-for-app-startup.sh
 ```
 
-you're on the last step. Just wait for this output to disappear and the application will be ready for testing.
+you're on the last step. Just wait for this output to disappear and the application will be ready for testing. If you're really keen to see what's going on, click on `startup.log` in the file explorer on the left of your codespace to follow along.
 
 Port forwarding is set up to port 3001 and once the application is available you'll be able to access it by clicking on the ports tab and then the internet/globe icon which will open a new browser window. It does take a minute to start, so if you get an error page to start with just give it a moment, or check out the application logs in `hippotech.log`.
 

@@ -2,6 +2,10 @@
 seeker
 .DS_Stored
 
+startup.log
+api.jar
+logx.txt
+
 ### VisualStudioCode ###
 .vscode/*      # Maybe .vscode/**/* instead - see comments
 !.vscode/settings.json
