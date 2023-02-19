@@ -107,6 +107,7 @@ jobs:
           onlySeekerVerified: true
 
       - name: Seeker Compliance Reporting
+        if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
         uses: mtolley/seeker-github-actions/seeker-compliance-reporting@v1.1
         with:
           seekerAPIToken: ${{ secrets.SEEKER_ACCESS_TOKEN }}
