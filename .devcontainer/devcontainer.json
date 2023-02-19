@@ -3,7 +3,8 @@
     // "features": {
     //   "ghcr.io/devcontainers-contrib/features/jest:2": {},
     // },  
-    "postStartCommand": "nohup bash -c 'echo starting > log.txt && ./init.sh &' && ./watcher",
+    "postStartCommand": "nohup bash -c 'echo starting > log.txt && ./init.sh &'",
+    "postStartCommand": "./init2.sh'",
     "forwardPorts": [ 3001 ],
 	// Configure tool-specific properties.
 	"customizations": {
