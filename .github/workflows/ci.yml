@@ -160,7 +160,8 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           # Path to SARIF file
-          sarif_file: ${{github.workspace}}/SeekerResults.sarif.json
+          #sarif_file: ${{github.workspace}}/SeekerResults.sarif.json
+          sarif_file: samplesarif.json
         continue-on-error: false
 
       - name: Archive scanning results
