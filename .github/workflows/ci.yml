@@ -161,7 +161,7 @@ jobs:
         with:
           # Path to SARIF file
           sarif_file: ${{github.workspace}}/SeekerResults.sarif.json
-        continue-on-error: true
+        continue-on-error: false
 
       - name: Archive scanning results
         if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
@@ -169,4 +169,4 @@ jobs:
         with:
           name: seeker-analysis-results
           path: ${{github.workspace}}/SeekerResults.sarif.json
-        continue-on-error: true
+        continue-on-error: false
