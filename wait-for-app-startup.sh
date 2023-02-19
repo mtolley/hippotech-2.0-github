@@ -16,17 +16,10 @@ then
 fi
  
 # Run the application
-nohup bash -c "java ${JAVA_OPTS} -jar api.jar 2>&1 | tee hippotech.log &",
+nohup bash -c "java ${JAVA_OPTS} -jar api.jar &",
 
-server_pid=$!
-
-until grep -q -i 'Started ApiApplication' hippotech.log
+until grep -q -i 'Started ApiApplication' nohup.out
 do
-  if ! ps $server_pid > /dev/null
-  then
-    echo "The server died" >&2
-    exit 1
-  fi
   echo -n "."
   sleep 1
 done
