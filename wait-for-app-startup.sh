@@ -16,12 +16,12 @@ then
 fi
  
 # Run the application
-nohup bash -c "java ${JAVA_OPTS} -jar api.jar &",
+nohup bash -c "java ${JAVA_OPTS} -jar api.jar &"
 
 until grep -q -i 'Started ApiApplication' nohup.out
 do
-  echo -n "."
+  echo -n "." | tee logx.txt
   sleep 1
 done
 echo
-echo "HippoTech is running."
+echo "HippoTech is running." | tee logx.txt
