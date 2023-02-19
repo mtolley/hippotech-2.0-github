@@ -109,6 +109,12 @@ jobs:
         working-directory: ./jest
         run: npm install && npm test
         
+      - name: Remove Java agent
+        if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
+        shell: bash
+        run: |
+          echo "JAVA_TOOL_OPTIONS=" >> $GITHUB_ENV
+
       - name: List Seeker Vulnerabilities
         if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
         uses: mtolley/seeker-github-actions/list-seeker-vulnerabilities@v1.1
