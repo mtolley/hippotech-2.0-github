@@ -100,25 +100,35 @@ jobs:
           minSeverity: HIGH
           onlySeekerVerified: true
 
-      - name: Get results from Seeker
-        uses: lejouni/seeker-report-export@main
+      - name: Seeker Compliance Reporting
+        uses: mtolley/seeker-github-actions/seeker-compliance-reporting@v1.1
         with:
-          url: ${{vars.SEEKER_SERVER_URL}}
-          token: ${{secrets.SEEKER_ACCESS_TOKEN}}
-          project: ${{vars.SEEKER_PROJECT_KEY}}
-          format: sarif
-          stacktrace: true
+          seekerAPIToken: ${{ secrets.SEEKER_ACCESS_TOKEN }}
+          generateComplianceReportPDF: true
+          failBuildIfNotInCompliance: true
 
-      - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          # Path to SARIF file
-          sarif_file: ${{github.workspace}}/SeekerResults.sarif.json
-        continue-on-error: true
+      # - name: Get results from Seeker
+      #   if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
+      #   uses: lejouni/seeker-report-export@main
+      #   with:
+      #     url: ${{vars.SEEKER_SERVER_URL}}
+      #     token: ${{secrets.SEEKER_ACCESS_TOKEN}}
+      #     project: ${{vars.SEEKER_PROJECT_KEY}}
+      #     format: sarif
+      #     stacktrace: true
 
-      - name: Archive scanning results
-        uses: actions/upload-artifact@v3
-        with:
-          name: seeker-analysis-results
-          path: ${{github.workspace}}/SeekerResults.sarif.json
-        continue-on-error: true
+      # - name: Upload SARIF file
+      #   if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
+      #   uses: github/codeql-action/upload-sarif@v2
+      #   with:
+      #     # Path to SARIF file
+      #     sarif_file: ${{github.workspace}}/SeekerResults.sarif.json
+      #   continue-on-error: true
+
+      # - name: Archive scanning results
+      #   if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: seeker-analysis-results
+      #     path: ${{github.workspace}}/SeekerResults.sarif.json
+      #   continue-on-error: true

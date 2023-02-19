@@ -1,6 +1,6 @@
 # HippoTech 2.0 - GitHub Demo
 
-Take Seeker for a spin in GitHub in a matter of seconds with the hottest new startup in tech: HippoTech 2.0. There's nothing to install: it all runs in the cloud in GitHub Codespaces.
+Take Seeker for a spin in GitHub in a matter of seconds with the hottest new startup in tech: HippoTech 2.0. There's nothing to install: it all runs in the cloud in GitHub Codespaces. You can also experiment with continuous integration via GitHub Actions: [GitHub Actions setup](ci-cd-github-actions.md)
 
 Questions and feedback are welcome! Send it to <mtolley@synopsys.com>. 
 
@@ -24,6 +24,7 @@ Once you have these details you can set them as secrets for your GitHub Codespac
 If your setup looks like this:
 
 ![The Completed Repository Secrets](screenshots/repository-secrets-completed.png)
+
 you're all set!
 
 ## Testing HippoTech 2.0 with Seeker in GitHub Codespaces
