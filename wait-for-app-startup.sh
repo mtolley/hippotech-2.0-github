@@ -18,10 +18,8 @@ fi
 # Run the application
 java ${JAVA_OPTS} -jar api.jar 2>&1 | tee hippotech.log 
 server_pid=$!
-echo "Server pid: $server_pid"
-echo "Output: $output"
-echo "Waiting for ready state"
-until grep -q -i 'Started ApiApplication' $output
+
+until grep -q -i 'Started ApiApplication' hippotech.log
 do
   if ! ps $server_pid > /dev/null
   then
