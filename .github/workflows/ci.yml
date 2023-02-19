@@ -1,5 +1,18 @@
 name: CI
 
+permissions:
+  actions: read|write
+  checks: read|write
+  contents: read|write
+  deployments: read|write
+  id-token: read|write
+  issues: read|write
+  discussions: read|write
+  packages: read|write
+  repository-projects: read|write
+  security-events: read|write
+  statuses: read|write
+
 # Controls when the workflow will run
 on:
   push:
@@ -11,7 +24,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: read-all | write-all
     env:
       SEEKER_SERVER_URL: ${{ vars.SEEKER_SERVER_URL }}
       SEEKER_PROJECT_KEY: ${{ vars.SEEKER_PROJECT_KEY }}
