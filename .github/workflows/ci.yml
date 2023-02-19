@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions: read-all|write-all
+    permissions: read-all | write-all
     env:
       SEEKER_SERVER_URL: ${{ vars.SEEKER_SERVER_URL }}
       SEEKER_PROJECT_KEY: ${{ vars.SEEKER_PROJECT_KEY }}
