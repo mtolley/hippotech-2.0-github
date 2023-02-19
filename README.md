@@ -52,7 +52,7 @@ HippoTech 2.0 is a Single Page Application (SPA) written in React/JavaScript. Th
 
 ![HippoTech screenshot](screenshots/screenshot.png)
 
-You can test it manually by logging in and navigating around the application, or you can launch the accompanying automated test suite by running `./run-tests.sh` in the terminal window. You can For manual test instructions, read on!
+You can test it manually by logging in and navigating around the application, or you can launch the accompanying automated test suite by running `./run-tests.sh` in the terminal window. For manual test instructions, read on!
 
 ## Features
 
