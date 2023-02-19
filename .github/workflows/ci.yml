@@ -114,13 +114,13 @@ jobs:
           generateComplianceReportPDF: true
           failBuildIfNotInCompliance: true
 
-      - name: Test Report
-        uses: dorny/test-reporter@v1
-        if: success() || failure()
-        with:
-          name: JEST Tests            
-          path: jest/junit.xml    
-          reporter: jest-junit        
+      # - name: Test Report
+      #   uses: dorny/test-reporter@v1
+      #   if: success() || failure()
+      #   with:
+      #     name: JEST Tests            
+      #     path: jest/junit.xml    
+      #     reporter: jest-junit        
 
       - name: Get results from Seeker
         if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
