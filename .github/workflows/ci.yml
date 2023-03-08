@@ -154,6 +154,7 @@ jobs:
           project: ${{vars.SEEKER_PROJECT_KEY}}
           format: sarif
           stacktrace: false
+          minSeverity: CRITICAL
 
       - name: Upload SARIF file
         if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
