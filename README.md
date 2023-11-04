@@ -25,7 +25,10 @@ If your setup looks like this:
 
 ![The Completed Repository Secrets](screenshots/repository-secrets-completed.png)
 
-you're all set!
+you're all set *unless* your Seeker server is configured to require an access token. If that is the case you will also need to:
+
+1. Create a new access token or copy an existing access token (Settings -> Access Tokens in the Seeker UI)
+2. Add another Codespaces respository secret named SEEKER_ACCESS_TOKEN holding your access token from step 1.
 
 ## Testing HippoTech 2.0 with Seeker in GitHub Codespaces
 
