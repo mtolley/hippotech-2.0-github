@@ -16,7 +16,7 @@ Name it anything you like. It can be a public or a private repository. Click **C
 
 If you don't have a Seeker Project set up and ready to use, go ahead and create one now. 
 
-If your Seeker server is configured to use Access Tokens you will need to create one, otherwise the Seeker agent will not be able to authenticate and connect to the server. See [these instructions](#How to create a new Access Token) below if you need to do this.
+If your Seeker server is configured to use Access Tokens you will need to create one, otherwise the Seeker agent will not be able to authenticate and connect to the server. See [these instructions](#How-to-create-a-new-Access-Token) below if you need to do this.
 
 Once you have these details you can set them as secrets for your GitHub Codespace so that Seeker knows where the server is located, and what project you're testing. Navigate to Settings -> Secrets and variables -> Codespaces and click on **New repository secret**. 
 
