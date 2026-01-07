@@ -157,7 +157,7 @@ jobs:
 
       - name: Upload SARIF file
         if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           # Path to SARIF file
           sarif_file: ${{github.workspace}}/SeekerResults.sarif.json
@@ -166,7 +166,7 @@ jobs:
 
       - name: Archive scanning results
         if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v6
         with:
           name: seeker-analysis-results
           path: ${{github.workspace}}/SeekerResults.sarif.json
