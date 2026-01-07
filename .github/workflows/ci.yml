@@ -147,7 +147,7 @@ jobs:
 
       - name: Get results from Seeker
         if: ${{ steps.seeker-check.outputs.enabled == 'true' }}
-        uses: lejouni/seeker-report-export@main
+        uses: lejouni/seeker-report-export@v1
         with:
           url: ${{vars.SEEKER_SERVER_URL}}
           token: ${{secrets.SEEKER_ACCESS_TOKEN}}
